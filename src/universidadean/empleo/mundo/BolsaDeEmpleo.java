@@ -88,12 +88,8 @@ public class BolsaDeEmpleo {
         int n = this.aspirantes.size();
         Aspirante temp;
 
-        System.out.println(this.aspirantes);
-
-
         for (int i = 0; i < n; i++) {
             for (int j =  i +1; j < n; j++) {
-
 
                 if (this.aspirantes.get(j).darNombre().compareToIgnoreCase(this.aspirantes.get(i).darNombre())<0) {
 
@@ -106,7 +102,6 @@ public class BolsaDeEmpleo {
             }
         }
 
-        System.out.println(this.aspirantes);
     }
 
     /**
@@ -144,9 +139,6 @@ public class BolsaDeEmpleo {
         int n = this.aspirantes.size();
         Aspirante temp;
 
-        System.out.println(this.aspirantes);
-
-
         for (int i = 0; i < n; i++) {
             for (int j =  i +1; j < n; j++) {
 
@@ -162,7 +154,6 @@ public class BolsaDeEmpleo {
             }
         }
 
-        System.out.println(this.aspirantes);
     }
 
     /**
@@ -189,7 +180,8 @@ public class BolsaDeEmpleo {
      * Busca un Aspirante según su nombre y retorna la posición en la que se encuentra. <br>
      *
      * @param nombre El nombre del aspirante buscado - nombre!=null
-     * @return Se retornó la posición donde se encuentra un aspirante con el nombre dado. Si no se encuentra ningún aspirante con ese nombre se retornó -1.
+     * @return Se retornó la posición donde se encuentra un aspirante con el nombre dado.
+     * Si no se encuentra ningún aspirante con ese nombre se retornó -1.
      */
     public int buscarAspirante(String nombre) {
         int posicion = -1;
@@ -241,7 +233,8 @@ public class BolsaDeEmpleo {
     /**
      * Busca el aspirante que tenga la menor edad en la bolsa.
      *
-     * @return Se retornó la posición donde se encuentra el aspirante más joven. Si no hay aspirantes en la bolsa se retornó -1
+     * @return Se retornó la posición donde se encuentra el aspirante más joven.
+     * Si no hay aspirantes en la bolsa se retornó -1
      */
     public int buscarAspiranteMasJoven() {
         int posicion = -1;
@@ -263,7 +256,8 @@ public class BolsaDeEmpleo {
     /**
      * Busca el aspirante que tenga la mayor edad en la bolsa.
      *
-     * @return Se retornó la posición donde se encuentra el aspirante con más edad. Si no hay aspirantes en la bolsa se retornó -1
+     * @return Se retornó la posición donde se encuentra el aspirante con más edad.
+     * Si no hay aspirantes en la bolsa se retornó -1
      */
     public int buscarAspiranteMayorEdad() {
         int posicion = -1;
@@ -286,7 +280,8 @@ public class BolsaDeEmpleo {
     /**
      * Busca el aspirante con más años de experiencia en la bolsa.
      *
-     * @return Se retornó la posición donde se encuentra el aspirante con mayor experiencia. Si no hay aspirantes en la bolsa se retornó -1
+     * @return Se retornó la posición donde se encuentra el aspirante con mayor experiencia.
+     * Si no hay aspirantes en la bolsa se retornó -1
      */
     public int buscarAspiranteMayorExperiencia() {
         int posicion = -1;
@@ -342,10 +337,8 @@ public class BolsaDeEmpleo {
      */
     public int eliminarAspirantesPorExperiencia(int aniosExperiencia) {
         int eliminados = 0;
-
         int cont = 0;
 
-        System.out.println(aniosExperiencia);
         // TODO: Realizar el ejercicio correspondiente
         if (aniosExperiencia >= 0) {
             ArrayList<Integer> indexAEliminar = new ArrayList<>();
@@ -373,8 +366,6 @@ public class BolsaDeEmpleo {
             eliminados = indexAEliminar.size();
             System.out.println(indexAEliminar);
         }
-
-
         return eliminados;
     }
 
